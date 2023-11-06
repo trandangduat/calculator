@@ -2,6 +2,8 @@ body {
     margin: 0;
     padding: 0;
     display: flex;
+    font-family: 'Roboto', sans-serif;
+    height: 100vh;
 }
 
 .btn {
@@ -19,6 +21,7 @@ body {
 }
 
 #calculator {
+    background-color: white;
     display: flex;
     flex-direction: column;
     margin: auto;
@@ -29,6 +32,8 @@ body {
     flex: 1;
 }
 
+/* Screen */
+
 #screen {
     padding: 5px 10px;
     border: 1px solid #1a1a1a;
@@ -37,7 +42,28 @@ body {
 
 #screen #current {
     font-size: 35px;
+    font-weight: 800;
 }
+
+/* Control */
+#control {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#control .btn {
+    flex: 1;   
+}
+
+#control #allclear {
+    flex-basis: calc(100% / (3/2));
+}
+
+#control #clear {
+    flex-basis: calc(100% / 3);
+}
+
+/* Number board */
 
 #number-board {
     display: flex;
@@ -52,6 +78,7 @@ body {
     display: flex;
     flex-wrap: wrap;
     flex-basis: calc(100% / (3/2));
+    flex-direction: row-reverse;
 }
 
 #number-board #numbers #num-btn {
@@ -63,6 +90,7 @@ body {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
+    flex-basis: calc(100%/3);
 }
 
 #number-board #operators #opr-btn {
