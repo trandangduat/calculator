@@ -4,24 +4,26 @@ body {
     display: flex;
     font-family: 'Roboto', sans-serif;
     height: 100vh;
+    background: url("background.jpg");
 }
 
 .btn {
     text-align: center;
     padding: 20px 0;
-    border: 1px solid black;
+    border: 1px solid rgb(37, 37, 37);
     box-sizing: border-box;
     font-size: 20px;
 }
 
 .btn:active {
-    background-color: black;
-    color: white;
+    background-color: white;
+    color: #1a1a1a;
     font-weight: 800;
 }
 
 #calculator {
-    background-color: white;
+    background-color: #1a1a1a;
+    color: white;
     display: flex;
     flex-direction: column;
     margin: auto;
