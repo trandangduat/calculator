@@ -1,0 +1,70 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.btn {
+    text-align: center;
+    padding: 20px 0;
+    border: 1px solid black;
+    box-sizing: border-box;
+    font-size: 20px;
+}
+
+.btn:active {
+    background-color: black;
+    color: white;
+    font-weight: 800;
+}
+
+#calculator {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    width: 500px;
+}
+
+#calculator > div {
+    flex: 1;
+}
+
+#screen {
+    padding: 5px 10px;
+    border: 1px solid #1a1a1a;
+    text-align: right;
+}
+
+#screen #current {
+    font-size: 35px;
+}
+
+#number-board {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#number-board > div {
+    flex: 1;
+}
+
+#number-board #numbers {
+    display: flex;
+    flex-wrap: wrap;
+    flex-basis: calc(100% / (3/2));
+}
+
+#number-board #numbers #num-btn {
+    flex: 1;
+    flex-basis: calc(100% / 3);
+}
+
+#number-board #operators {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+#number-board #operators #opr-btn {
+    flex: 1;
+}
