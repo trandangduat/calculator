@@ -98,3 +98,9 @@ body {
 #number-board #operators #opr-btn {
     flex: 1;
 }
+
+
+/* Exploding effect*/
+.explode {
+    display: none;
+}

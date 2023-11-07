@@ -1,3 +1,4 @@
+let theCalculator = document.getElementById("calculator");
 let numbers = document.getElementById("numbers");
 let operators = document.getElementById("operators");
 let preAnswer = document.getElementById("pre-ans");
@@ -34,6 +35,14 @@ function buildInitLayout() {
 }
 
 function calculate() {
+    if (currentNumber == 0 && preOperator == '/') {
+        let catExplode = document.createElement("img");
+        catExplode.setAttribute("src", "catexplode.webp");
+        theCalculator.innerHTML = "";
+        theCalculator.appendChild(catExplode);
+        console.log("cat explode");
+        return;
+    } 
     if (preOperator == '+') return previousNumber + currentNumber;
     if (preOperator == '-') return previousNumber - currentNumber;
     if (preOperator == 'x') return previousNumber * currentNumber;
@@ -63,7 +72,7 @@ function updatePreAnswer(e) {
     current.innerHTML = "0";
 }
 
-function resetCalculator(e) {
+function resetCalculator() {
     currentNumber = 0;
     previousNumber = 0;
     preOperator = '+';
